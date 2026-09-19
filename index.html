@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAR Extractor — Support</title>
+<style>
+:root { color-scheme: light dark; --ink: #16181d; --dim: #6b7280; --bg: #ffffff; --line: #e5e7eb; --tint: #1d7a4c; }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #ecedef; --dim: #9aa1ab; --bg: #16181d; --line: #2c3038; --tint: #4ec98a; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+       font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 4rem 1.25rem 6rem; }
+h1 { font-size: 2.1rem; letter-spacing: -0.02em; margin: 0 0 .25rem; }
+h2 { font-size: 1.2rem; margin: 2.5rem 0 .6rem; }
+p, li { color: var(--ink); }
+.lead { color: var(--dim); margin: 0 0 2.5rem; }
+a { color: var(--tint); }
+dl { margin: 0; }
+dt { font-weight: 600; margin-top: 1.4rem; }
+dd { margin: .3rem 0 0; color: var(--dim); }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+         color: var(--dim); font-size: .92rem; }
+kbd { font: inherit; font-size: .95em; border: 1px solid var(--line);
+      border-bottom-width: 2px; border-radius: .35rem; padding: 0 .35rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>RAR Extractor</h1>
+<p class="lead">Support for the Mac app that opens forty-one archive formats.</p>
+
+<h2>Getting help</h2>
+<p>Open an issue on
+<a href="https://github.com/somefork2/rar-extractor-support/issues">GitHub</a> — it needs
+no account details beyond a GitHub login, and every message is read. Please say which macOS
+version you are on and, if an archive will not open, what made it; that is usually enough
+to find the answer.</p>
+
+<h2>Questions that come up</h2>
+<dl>
+  <dt>An archive will not open.</dt>
+  <dd>The format is worked out from the file's contents, not its name, so a wrong extension
+      is not the problem. If the file was downloaded, check it arrived whole: Tools ▸ Test
+      Integrity reads every file through and names anything damaged.</dd>
+
+  <dt>Can it create RAR archives?</dt>
+  <dd>No. The unrar licence permits reading RAR archives but not creating them. The app
+      writes ZIP, TAR, TAR.GZ, TAR.BZ2, TAR.XZ and TAR.ZST.</dd>
+
+  <dt>The right-click menu is not in the Finder.</dt>
+  <dd>macOS asks you to switch the extension on once: Settings ▸ Finder ▸ Open Extension
+      Settings, then tick RAR Extractor.</dd>
+
+  <dt>Why does it ask for a folder when extracting?</dt>
+  <dd>The app is sandboxed. Opening an archive grants access to that one file, so the first
+      time it writes into a folder it asks for that folder through the standard panel, and
+      remembers the answer. Settings ▸ Privacy lists the folders you have allowed and can
+      revoke any of them.</dd>
+
+  <dt>Where do archive passwords go?</dt>
+  <dd>Into your login keychain, if you ask the app to remember one. Never to us, never into
+      a file. Settings ▸ Privacy can forget them all.</dd>
+
+  <dt>How do I look inside without unpacking?</dt>
+  <dd>Select a file in the window and press <kbd>Space</kbd>, or press <kbd>Space</kbd> on an
+      archive in the Finder. To take one file out, drag its row straight to the Desktop.</dd>
+</dl>
+
+<h2>What it reads</h2>
+<p>ZIP, RAR, 7z, TAR, tar.gz, tar.bz2, tar.xz, tar.zst, tar.lz4, tar.lzma, tar.lz, tar.Z,
+gz, bz2, xz, zst, lz4, lzma, lz, br, lzfse, .Z, deb, rpm, cpio, ar, xar, .pkg, ISO 9660,
+UDF, SquashFS, CAB, WIM, apk, jar, war, ear, ipa, epub, cbz and cbr.</p>
+
+<footer>
+<p><a href="privacy.html">Privacy policy</a></p>
+<p>© 2026 RAR Extractor</p>
+</footer>
+</main>
+</body>
+</html>
